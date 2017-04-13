@@ -1,0 +1,41 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[mergetool]
+	keepBackup = true
+[core]
+    autocrlf = input
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+    editor = vi
+[user]
+	name = paul-tinius
+	email = paul@formationds.com
+[credential]
+	helper = cache
+[diff]
+	tool = vimdiff
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
+[push]
+	default = matching
